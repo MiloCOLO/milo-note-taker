@@ -1,3 +1,18 @@
+const express = require('express');
+const fs = require('fs');
+// adding express for streamlining 
+// adding fs to help with saving and retrieving notes
+
+app.get('/api/notes', (req, res) => //this will create a route to the notes page
+  console.log("I'm in the get route"),
+  res.json(path.join(__dirname, '/public/notes.html'))
+);
+
+app.post('/api/notes', (req, res) =>
+  console.log("I'm in the post route"),
+  res.json(path.join(__dirname, '/public/notes.html'))
+);
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
